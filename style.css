@@ -1,0 +1,974 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.head {
+    position: sticky;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 10px;
+    z-index: 2;
+}
+
+.header {
+    height: 8vh;
+    width: 100%;
+    background-color: rgb(255, 196, 0);
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.buy {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.navbar {
+    max-width: 1400px;
+    width: 95%;
+    /* height: 12vh; */
+    padding: 18px 20px;
+    background-color: rgb(225, 225, 225);
+    margin: auto;
+    margin-top: 7px;
+    border-radius: 5px;
+    border: 1px solid silver;
+    display: flex;
+    /* Missing tha */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar>.nav01>img {
+    height: 8vh;
+}
+
+.nav01 {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.ultrabit {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 1000;
+}
+
+.ue {
+    margin: 9px 3px 3px 9px;
+}
+
+.nav02 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    background-color: orange;
+    height: 35px;
+    width: 90px;
+    border-radius: 7px;
+    border: none;
+}
+
+.global {
+    height: 25px;
+}
+
+.searchicon {
+    height: 25px;
+}
+
+.nav03 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu {
+    display: none;
+}
+
+.globalenglish {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.option {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toogle {
+    width: 90px;
+}
+
+.toogletext {
+    font-size: large;
+}
+
+.firstview {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* 1. Container ko relative aur fixed height dena zaroori hai */
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    height: 100%;
+    max-height: 380px;
+    /* Height fix karein */
+    overflow: hidden;
+    margin: 0 auto;
+    /* border: 2px solid #333; Border taaki dikhe ki box hai */
+    /* background-color: #f0f0f0;
+    Grey background agar image load na ho */
+
+}
+
+/* 2. Images ko absolute karke stack karein */
+.slide-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    /* Shuru mein sab chupi hongi */
+    transform: translateX(0%);
+    animation: slideLeft 9s infinite;
+    padding-right: 10px;
+}
+
+/* 3. Har image ka alag time (Delay) */
+.img-1 {
+    animation-delay: 0s;
+}
+
+.img-2 {
+    animation-delay: 3s;
+}
+
+.img-3 {
+    animation-delay: 6s;
+}
+
+@keyframes slideLeft {
+
+    0%,
+    30% {
+        opacity: 1;
+        transform: translateX(0);
+        /* Apni jagah par stable rahegi */
+    }
+
+    40%,
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+        /* Left ki taraf slide hokar gayab hogi */
+    }
+}
+
+.whatnew {
+    background-color: lightyellow;
+    border: 2px solid rgb(223, 168, 66);
+    border-radius: 5px;
+    margin-top: 3px;
+    padding: 3px 4px 3px 4px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.maintext {
+    font-size: clamp(40px, 6vw, 65px);
+    font-family: "Oswald", sans-serif;
+    line-height: 70px;
+
+}
+
+.firstview01 {
+    /* margin-left: 60px; */
+    padding-inline: 60px;
+}
+
+.shortexplain {
+    padding-top: 15px;
+    font-size: 20px;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.ultraedittrail {
+    border-radius: 5px;
+    width: 170px;
+    font-size: 17px;
+    padding: 3px 3px 3px 3px;
+}
+
+.viewplan {
+    border-radius: 5px;
+    background-color: rgb(225, 225, 225);
+    width: 100px;
+    font-size: 17px;
+    padding: 3px 3px 3px 3px;
+}
+
+.mainbutton {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.Available {
+    font-size: 19px;
+    display: inline-block;
+    /* position: absolute; */
+    text-align: center;
+    /* z-index: 10; Text image ke upar rahe */
+}
+
+.operatingsystem {
+    width: 120px;
+    display: block;
+}
+
+.operatordownoad {
+    display: flex;
+    /* position: relative; */
+    /* justify-content: center; Horizontal center */
+    align-items: center;
+    /* Vertical center */
+    gap: 10px;
+}
+
+.brand-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    overflow: hidden;
+    /* Bahar jane wale brands ko chupayega */
+    padding: 20px 0;
+}
+
+.brand {
+    flex-shrink: 0;
+    /* Size fix rahega */
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 20px;
+    animation: flowLeft 5s linear infinite;
+}
+
+@keyframes flowLeft {
+    0% {
+        transform: translateX(0);
+        /* Start from normal position */
+    }
+
+    100% {
+        transform: translateX(-300%);
+        /* Move exactly half (width of one set) */
+    }
+}
+
+.feature {
+    background-color: #e0dccf;
+    padding-top: 40px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.ultraspecality {
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    border: 1px solid #d8c2c2;
+}
+
+.specialitytext {
+    font-size: 40px;
+    max-width: 420px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.feature1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.feature2 {
+    display: grid;
+    width: 90vw;
+    max-width: 1230px;
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px 20px;
+    padding-bottom: 60px;
+}
+
+.problems {
+    background-color: white;
+    padding-left: 15px;
+}
+
+.problempic {
+    width: 32px;
+    padding-top: 15px;
+    padding-bottom: 8px;
+}
+
+.problems_head {
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 7px;
+}
+
+.problems_text {
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+}
+
+.problems_details {
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+}
+
+.review-text {
+    font-size: 40px;
+    text-align: center;
+    padding: 50px;
+    justify-content: center;
+    font-family: "Oswald", sans-serif;
+}
+
+.overall-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6.7px
+}
+
+.overall-rating>div {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.reviewpic {
+    width: 200px;
+}
+
+.review-rate {
+    font-size: 20px;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px 40px;
+    padding: 50px 160px;
+    color: grey;
+}
+
+.people_review {
+    border: 2px solid #d3d3d3;
+    border-radius: 15px;
+    padding: 20px 20px;
+}
+
+.reviewerpic {
+    width: 60px;
+    border-radius: 6px;
+}
+
+.there_review {
+    padding-bottom: 50px;
+}
+
+.aboutpeople {
+    display: flex;
+    gap: 10px;
+}
+
+.about_reviewer_name {
+    color: black;
+}
+
+.reviewer_business {
+    font-size: 10px;
+}
+
+.reviewer_business_time {
+    font-size: 10px;
+}
+
+.there_review2 {
+    padding-bottom: 30px;
+}
+
+.crowdpic {
+    width: 150px;
+}
+
+.crowdpic_main {
+    text-align: center;
+}
+
+.more_review {
+    padding: 50px;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.newthing {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+    background-color: #e0dccf;
+    gap: 80px;
+    padding: 70px 100px;
+}
+
+.release_notes_pic {
+    width: 40vw;
+    max-width: 800px;
+}
+
+.newtext {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.newtext_head {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.newtext_description {
+    font-size: 18px
+}
+
+.newtext_button {
+    width: 200px;
+    font-size: 16px;
+}
+
+.newtext_calender {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.calendar {
+    width: 30px;
+}
+
+.newtext_calender_date {
+    font-size: 18px
+}
+
+.representation {
+    text-align: center;
+    padding: 80px;
+}
+
+.representation_button {
+    background-color: #ffffff;
+    border: 2px solid grey;
+    width: 210px;
+}
+
+.representation_text {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.representative_text_main {
+    padding: 30px 0;
+}
+
+.representation_view {
+    display: grid;
+    grid-template-rows:
+        repeat(auto-fit, minmax(300px, 1fr));
+    text-align: left;
+    gap: 50px;
+}
+
+.main_representation {
+    background-color: #e0dccf;
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+    padding: 20px;
+    gap: 70px;
+    border-radius: 10px;
+}
+
+.represtantive_pic {
+    width: 50px;
+}
+
+.for_business_pic {
+    width: 30px;
+}
+
+.represerntstion_section02>.representative_pic {
+    max-width: 600px;
+    width: 36vw;
+}
+
+.for_business {
+    display: flex;
+    background-color: white;
+    border-radius: 7px;
+    gap: 10px;
+    align-items: center;
+    width: 260px;
+    padding: 5px;
+}
+
+.representation_head {
+    font-size: 30px;
+    font-weight: 600;
+    padding: 10px 0px;
+}
+
+.problem_solution,
+.representative_problem {
+    color: #dd8700;
+    font-size: 18px;
+}
+
+.problem_solution_text,
+.representative_problem_text {
+    color: gray;
+    font-size: 17px;
+}
+
+.repesentative_query {
+    padding: 10px 0px;
+}
+
+.representer_details {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+}
+
+.representer_review {
+    border: 2px solid #cabcbc;
+    border-radius: 5px;
+    background-color: #e0ded6;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.problem_solution_text {
+    padding-bottom: 10px;
+}
+
+.representation_discover {
+    width: 150px;
+    font-size: 16px;
+}
+
+.represerntstion_section02 {
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ue_quote {
+    text-align: center;
+    border: 2px solid#a8a8a8;
+    border-radius: 5px;
+    background-color: white;
+    padding: 3px;
+}
+
+footer {
+    background-color: #e0dccf;
+    padding: 100px;
+}
+
+.ue_quote_parent {
+    text-align: center;
+}
+
+.editro_intro {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.editor_feature {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+.editor_feature_box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.editor_feature_text {
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.download_ultraedit {
+    width: 170px;
+    margin-bottom: 80px;
+}
+
+.types_of_feature {
+    align-items: center;
+    text-align: center;
+}
+
+.ue_logo {
+    width: 50px;
+}
+
+.about_us {
+    border-radius: 10px;
+    background-color: black;
+    color: #ffffff;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1.2fr 2fr;
+    gap: 80px;
+}
+
+.Ultraedit {
+    padding: 20px 0;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.about_ultraedit_parent {
+    display: none;
+}
+
+.what_ultraedit {
+    padding: 0px 0px 30px 0px;
+}
+
+.newsletter_text {
+    color: grey;
+    padding-bottom: 20px;
+}
+
+.email_id {
+    padding: 11px 50px;
+    border-radius: 7px;
+}
+
+.Subscribe {
+    position: absolute;
+    z-index: 1;
+    left: 304px;
+    margin-top: 4px;
+
+}
+
+input::placeholder {
+    color: #ffffff;
+    /* Naya rang (Orange) */
+    opacity: 1;
+    /* Firefox mein transparency hatane ke liye */
+    font-style: italic;
+    /* Optional: Text ko tircha karne ke liye */
+}
+
+input {
+    text-align: left;
+    background-color: grey;
+}
+
+li {
+    list-style: none;
+    font-size: 18px;
+
+}
+
+.nav_ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.query_name {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0px;
+    color: grey;
+}
+
+.copyright {
+    text-align: right;
+    padding-top: 110px;
+}
+
+@media (max-width:975px) {
+    .about_us {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .copyright {
+        text-align: left;
+        padding-top: 80px;
+    }
+
+    /* .main_representation{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+     } */
+    .main_representation {
+        display: block;
+    }
+
+    .representative_pic {
+        padding: 10px 0;
+    }
+
+    .represerntstion_section02 {
+        margin-top: 10px;
+    }
+
+    .represerntstion_section02>.representative_pic {
+        max-width: 700px;
+        width: 70vw;
+    }
+
+    .newthing {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .newtext {
+        align-items: center;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .release_notes_pic {
+        width: 80vw;
+        max-width: 800px;
+    }
+
+    .nav02 {
+        display: none;
+    }
+
+    .nav03 {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .slideshow {
+        display: none;
+    }
+
+    .firstview {
+        grid-template-columns: 1fr;
+    }
+
+    .what_ultraedit {
+        display: none;
+    }
+
+    .about_ultraedit_parent {
+        display: block;
+        padding: 0px 0px 50px 0px;
+    }
+}
+
+@media(max-width:650px) {
+    footer {
+        padding: 15px;
+    }
+
+    .nav_ul {
+        flex-direction: column;
+    }
+
+    .email_id {
+        width: 230px;
+    }
+
+    .Subscribe {
+        left: 182px;
+    }
+
+    .review-grid {
+        padding: 50px 10px;
+    }
+
+    .newthing {
+        padding: 70px 10px;
+    }
+
+    .review-text {
+        font-size: 20px;
+    }
+
+    .overall-rating {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .overall-rating>div {
+        width: 90vw;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .reviewpic {
+        width: 140px;
+    }
+
+    .representation_text {
+        font-size: 20px;
+        font-weight: 0;
+    }
+
+    .representation {
+        padding: 10px;
+    }
+
+    .people_review {
+        padding: 10px;
+    }
+
+    .representation_text {
+        font-weight: 0;
+    }
+
+    .firstview01 {
+        padding-inline: 10px;
+    }
+
+    .maintext {
+        font-size: clamp(20px, 6vw, 65px);
+        line-height: 40px;
+    }
+
+    .shortexplain {
+        font-size: 15px;
+    }
+
+    .ultraedittrail {
+        width: 120px;
+        font-size: 14px;
+    }
+
+    .viewplan {
+        width: 80px;
+        font-size: 14px;
+    }
+
+    .feature2 {
+        margin: 0 auto;
+    }
+
+    /* .main_representation{
+        display: block;
+    }
+    .representative_pic{
+        padding: 10px 0;
+    }
+    .represerntstion_section02{
+        margin-top: 10px;
+    } */
+    .ultrabit {
+        font-size: 14px
+    }
+
+    .by_Enterprise {
+        font-size: 14px;
+    }
+
+    .header {
+        justify-content: space-between;
+        padding: 10px;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        gap: 5px;
+    }
+
+    .buy {
+        width: 100%;
+    }
+    .Offer{
+        width: 100%;
+    }
+}
